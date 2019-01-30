@@ -50,11 +50,19 @@ handleSubmit = (evt) => {
   const newArray =[]
     Object.entries(this.state).map(value => { 
     if (value[1].length > "") {
-    return( newArray.push(value[0]))
+    return(newArray.push(value[0]))
   }});
-   this.matchNumbers(onRandomise(newArray))
+    this.matchNumbers(onRandomise(newArray))
 };
-
+// this may work  try when ready
+// handleSubmit = (evt) => {
+//   const newArray =[]
+//     Object.entries(this.state).map(value => { 
+//     return value[1].length > ""
+    
+//   });
+//    this.matchNumbers(onRandomise(this.handleSubmit()))
+// };
 
   passProps = (result, number) =>{
        var props = this.props;
@@ -66,7 +74,6 @@ handleSubmit = (evt) => {
   // higher order function that recieves the number props from a onRandomise function
   // this function by aan onlick on the 'roll' button.
   matchNumbers = (props) => {
-    console.log(props)
   switch(props) {
     case "box1":
     return this.passProps(this.state.box1, "1")

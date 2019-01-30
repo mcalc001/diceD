@@ -4,6 +4,8 @@ const RollButton = () => {
 	return(
 
 	<div>
+	    <p onClick={() => onRollChange("rollAgain")} className='f5 center link dib black pa3 pointer' > Roll Again?</p>
+
      pooo
 	</div>
 	)

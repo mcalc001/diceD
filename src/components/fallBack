@@ -239,3 +239,11 @@
 
 
 // export default TextBox;
+
+
+
+NAV
+
+
+<p onClick={() =>  onRouteChange('signout')} className='f5 link dib black underline pa3 pointer' > SignOut </p>
+  <p onClick={() =>  onRouteChange('userPage')} className='f5 link dib black underline pa3 pointer' > User </p>

@@ -1,0 +1,17 @@
+.profile-modal {
+	background-color: rgba(225, 225, 225, 0.8);
+	background-opacity: 70%;
+	position: fixed;
+	height: 100%;
+	width:100%;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.insideCoponent{
+	background-color: white;
+}

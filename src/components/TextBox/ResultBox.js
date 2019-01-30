@@ -28,11 +28,11 @@ import './ResultBox.css';
 	}
 }
 
-const ResultsBox = ({result, number}) => {
-
-  let finalResult = result.replace(/"/g, '');
+const ResultsBox = ({result, number, onRollChange, onProfileUpdate}) => {
+   let finalResult = result.replace(/"/g, '');
     
   
+
   return(
 
   	<div id=" ">  
@@ -47,6 +47,9 @@ const ResultsBox = ({result, number}) => {
     <p className=" tc f6 f5-ns lh-copy measure">  
        {finalResult}
     </p>
+     <p onClick={() => onRollChange("rollAgain")} className='f5 center link dib black pa3 pointer' > Roll Again?</p>
+     <p onClick={() => onProfileUpdate(finalResult)} className='f5 center link dib black pa3 pointer' > Save Roll?</p>
+
   </div>
   </div>
   </div>

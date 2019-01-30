@@ -2,7 +2,6 @@ import React from 'react';
 import dice from './dice.gif'
 import './Header.css';
 
- 
 
 const Header = () => {
 return(
