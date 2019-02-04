@@ -3,9 +3,6 @@ import React from 'react';
 
 const posts =({data, date, id }) => {
   const newdata =  data.replace(/"/g, '');
-  // const newdate = date.slice(0, -14);
-  // console.log(newdate);
-
 
     if (data === "No posts yet, you had better get rolling!"){
       return <div className=" pt3 black"> {data} </div>
@@ -32,4 +29,3 @@ const posts =({data, date, id }) => {
 
 export default posts; 
 
-//     <button className=" mt3 color white center shadow-5 "> delete </button>

@@ -97,7 +97,7 @@ handleSubmit = (evt) => {
    render() {
 
         return(
-
+<div className="pl1 pr2">
   <article className="  shadow-3 ph4 tc w-100 mw5.5 mw6-ns center pa3 mb4  ">
      <div  >
       <label htmlFor="comment"
@@ -185,6 +185,7 @@ handleSubmit = (evt) => {
     <button onClick={this.handleSubmit} className=" shadow-5 pa5 b ph3 pv3 br2 putton input-reset ba grow pointer f5 dib">Roll</button>
      </div>
   </article>
+  </div>
   )}
 }
 export default TextBox;
