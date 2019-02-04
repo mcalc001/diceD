@@ -35,21 +35,24 @@ const ResultsBox = ({result, number, onRollChange, onProfileUpdate}) => {
 
   return(
 
-  	<div id=" ">  
+  	<div id=" mt0 pa0 ">  
     
-      <div id="test">  
+      <div id="test mt0  pa0 ">  
        {matchNumbers(number)}
       </div>
 
-  <div className=" resultBox shadow-3 ph4 tc w-100 mw5.5 mw6-ns center pa3 mb4">
-  <h1 className=" tc f4 br3 br--top black-60 mv0 pv2 ">The Dice Have Chosen </h1>
-  <div className=" pa3 bt b--black-10">
-    <p className=" tc f6 f5-ns lh-copy measure">  
+  <div className=" mt0 resultBox shadow-4 ph4 tc w-75 mw5.5 mw6-ns center pa3 mb4">
+  <h1 className=" f4  b mv0 pv2 ph3 newcolor ">The Dice Have Chosen </h1>
+  <div className="  bt newcolor">
+    <p className=" tc pa3 f6 f5-ns lh-copy measure">  
        {finalResult}
     </p>
-     <p onClick={() => onRollChange("rollAgain")} className='f5 center link dib black pa3 pointer' > Roll Again?</p>
-     <p onClick={() => onProfileUpdate(finalResult)} className='f5 center link dib black pa3 pointer' > Save Roll?</p>
+     
+     <div className=" flex-column center ">
+     <button onClick={() => onRollChange("rollAgain")} className=" shadow-5  b ph3 pv2 br2 putton input-reset ba grow pointer f5 dib mr2 "> Roll again?</button>
 
+     <button onClick={() => onProfileUpdate(finalResult)} className=" shadow-5 b ph3 pv2 br2 putton input-reset ba grow pointer f5 dib mr2"> Save Roll?</button>
+      </div>
   </div>
   </div>
   </div>

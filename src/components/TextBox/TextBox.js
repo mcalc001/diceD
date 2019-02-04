@@ -51,8 +51,10 @@ handleSubmit = (evt) => {
     Object.entries(this.state).map(value => { 
     if (value[1].length > "") {
     return(newArray.push(value[0]))
-  }});
+  } return null
+})
     this.matchNumbers(onRandomise(newArray))
+
 };
 // this may work  try when ready
 // handleSubmit = (evt) => {
@@ -88,7 +90,7 @@ handleSubmit = (evt) => {
     case "box6":
     return this.passProps(this.state.box6, "6")
     default:
-    return console.log("notMatched");
+    return alert("Fill in two or more boxes to reveiv a result");
   }
 }
   

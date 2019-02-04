@@ -1,4 +1,5 @@
 import React from 'react';
+import './Register.css'
 
 
 class Register extends React.Component {
@@ -10,7 +11,7 @@ class Register extends React.Component {
 		name: '',
 	  }
 	}
-
+ 
 	onEmailChange=(event)=> {
 		this.setState({email: event.target.value})
 	}
@@ -32,46 +33,46 @@ class Register extends React.Component {
 			})
 		}) 
 		.then(response => response.json())
-		.then(user => {
-			if (user.id) {
 
+		.then(user => {
+			console.log(user)
+			if (user.id) {
 			  this.props.loadUser(user)
               this.props.onRouteChange('home')
-              this.props.onPostFetch()
+           
 			}
 		})
 	}
-
    render() {
 		return(
-			<article className="br3 ba b--black-10 mv4 w-100 w-50-m w-25-l mw5 shadow-5 center">
-			<main className="pa4 black-80">
+			<article className="  border br3  white mv4 w-100 w-50-m w-25-l mw5 shadow-5 center">
+			<main className="pa4 redn">
 			  <div className="measure">
 			    <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
-			      <legend className="f3 fw6 ph0 mh0">Register</legend>
+			      <legend className="f3.5 b subh redn b fw6 ph0 mh0">Register</legend>
 			      <div className="mt3">
-			        <label className="db fw6 lh-copy f6" htmlFor="name">Name</label>
+			        <label className="db redn fw6 subh lh-copy b f5" htmlFor="name">Name</label>
 			        <input 
 			        onChange={this.onNameChange}
-			        className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" 
+			        className="pa2 black redn bord input-reset subh ba bg-transparent hover-bg-black  w-100" 
 			        type="text" 
 			        name="name"  
 			        id="name"/>
 			      </div>
 			      <div className="mt3">
-			        <label className="db fw6 lh-copy f6" htmlFor="email-address">Email</label>
+			        <label className="db subh fw6 lh-copy f5" htmlFor="email-address">Email</label>
 			        <input 
 			        onChange={this.onEmailChange}
-			        className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+			        className="pa2 subh input-reset bord ba bg-transparent hover-bg-black  w-100"
 			         type="email" 
 			         name="email-address" 
 			          id="email-address"/>
 			      </div>
 			      <div className="mv3">
-			        <label className="db fw6 lh-copy f6" htmlFor="password">Password</label>
+			        <label className="db fw6  subh lh-copy f5" htmlFor="password">Password</label>
 			        <input 
 			        onChange={this.onPasswordChange}
-			        className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100" 
+			        className="b pa2  subh input-reset bord ba bg-transparent hover-bg-black  w-100" 
 			        type="password" 
 			        name="password"  
 			        id="password"/>
@@ -80,8 +81,12 @@ class Register extends React.Component {
 			    <div className="">
 			      <input 
 			      onClick={this.onSubmitSignin} 
-			      className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" 
+			      className=" mt2 pt4 3shadow-5  b ph3 pv2 br2 putton input-reset ba grow pointer f5 dib "
 			      type="submit" value="Register"/>
+			    </div>
+			    <div className="lh-copy mt3">
+			      <p onClick={()=> this.props.onRouteChange('signin')} 
+			      className="f6 link dim  db redn  pointer ">Sign In</p>
 			    </div>
 			  </div>
 			</main>

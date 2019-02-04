@@ -1,11 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Staatliches");
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 
-
 body {
 
   padding: 0;
-  font-family: 'Staatliches', cursive;
+  font-family: 'Raleway', sans-serif;
   color: black;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

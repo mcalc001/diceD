@@ -2,20 +2,34 @@ import React from 'react';
 
 
 const posts =({data, date, id }) => {
+  const newdata =  data.replace(/"/g, '');
+  // const newdate = date.slice(0, -14);
+  // console.log(newdate);
 
-  return (
-    <article className="center mw5 mw6-ns hidden ba mv4">
-  <h1 className="f4 bg-near-black white mv0 pv2 ph3">{date}</h1>
-  <div className="pa3 bt">
-    <p className="f6 f5-ns lh-copy measure mv0">
-      {data}
-    </p>
-    <button> delete</button>
+
+    if (data === "No posts yet, you had better get rolling!"){
+      return <div className=" pt3 black"> {data} </div>
+    }else {
+     return (
+
+
+<article className="  white color shadow-5 center mh mw6 mw6-ns hidden pa3 mb4 ba mv4">
+  <h1 className="f4  mw6 black b white mv0 pv2 ph3">{date.slice(0, -14)}</h1>
+   <div className="pa3 bt">
+
+    <p className=" w5 white f6 f5-ns lh-copy measure mv0">
+      {newdata}
+     </p>
+     
+   
+
 
   </div>
 </article>
   	
   	)
-}
+}}
 
 export default posts; 
+
+//     <button className=" mt3 color white center shadow-5 "> delete </button>
