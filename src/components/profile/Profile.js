@@ -58,7 +58,7 @@ render() {
    return ( 
 
       	<div className="profile-modal">
-      	 <article className=" insideCoponent shadow-3   tc pa3 w6 mw6 mw6-ns center    ">
+      	 <article className=" bg-white shadow-3 w-100 tc pa2 w6 mw6 mw6-ns center pt3   ">
       	   <Header name={this.state.name} />  
 
             <Scroll>         
@@ -74,7 +74,8 @@ render() {
                   /> 
             )} else {
             return(
-                <Posts 
+                <Posts
+                key={i} 
           data={"No posts yet, you had better get rolling!"} 
           
                   /> 
@@ -89,8 +90,10 @@ render() {
 
       }
 
-             </Scroll>     
-           <button className=" mt2 pt4 3shadow-5  b ph3 pv2 br2 putton input-reset ba grow pointer f5 dib mr2 " onClick={this.props.toggleModal}>Return</button>
+             </Scroll>    
+             <div> 
+           <button className=" mt2 pt4 3 shadow-5  b ph3 pv2 br2 putton input-reset ba grow pointer f5 dib mr2 " onClick={this.props.toggleModal}>Return</button>
+             </div> 
         </article>
       </div> 
   	)
