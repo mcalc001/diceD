@@ -50,15 +50,12 @@ class Profile extends React.Component {
   
 render() {
   const dat = this.state.rollData;
-  // const{ rollData } = this.state;
   const data = dat.reverse();
-  
-     // const data = List;
   
    return ( 
 
-      	<div className="profile-modal">
-      	 <article className=" bg-white shadow-3 w-100 tc pa2 w6 mw6 mw6-ns center pt3   ">
+      	<div className="profile-modal  ">
+      	 <article className=" bg-white shadow-3 w-100 tc pa2 w6 mw6 mw6-ns center pt3 pb3 mt5 ">
       	   <Header name={this.state.name} />  
 
             <Scroll>         
@@ -79,17 +76,10 @@ render() {
           data={"No posts yet, you had better get rolling!"} 
           
                   /> 
-
               )
-        }
-
-          }
+          }}
         )  
-
-
-
       }
-
              </Scroll>    
              <div> 
            <button className=" mt2 pt4 3 shadow-5  b ph3 pv2 br2 putton input-reset ba grow pointer f5 dib mr2 " onClick={this.props.toggleModal}>Return</button>
