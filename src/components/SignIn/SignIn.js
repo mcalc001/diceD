@@ -25,7 +25,7 @@ class SignIn extends React.Component {
 	}
 
 	onSubmitSignin = () => {
-		fetch('http://localhost:3000/signin', {
+		fetch('https://fathomless-shelf-13230.herokuapp.com/signin', {
 			method: 'post',
 			headers: {'Content-Type': 'application/json'},
 			body: JSON.stringify({
@@ -37,19 +37,19 @@ class SignIn extends React.Component {
 		.then(data=> { 
 			if (data.userId && data.success === 'true') {
 		      this.saveAuthTokenInSession(data.token)
-			  fetch(`http://localhost:3000/signinPf/${data.userId}`,{
+			  fetch(`https://fathomless-shelf-13230.herokuapp.com/signinPf/${data.userId}`,{
               method : 'get',
               headers: {
               'Content-Type': 'application/json',
               'Authorization': data.token
-            }
+            } 
             })
             .then(resp => resp.json())
             .then( user =>{
               if (user && user.email){
                 this.props.loadUser(user)
                 this.props.onRouteChange('home');
-              }
+              } 
           })
         .catch(console.log)
 		}
@@ -68,7 +68,7 @@ class SignIn extends React.Component {
 			        <label className="db b redn fw6 lh-copy f6" htmlFor="email-address">Email</label>
 			        <input
 			         onChange= {this.onEmailChange}
-			         className="pa2  input-reset ba  hover-bg-black w-100" 
+			         className="pa2 redn input-reset ba   w-100" 
 			         type="email" 
 			         name="email-address"  
 			         id="email-address"/>
@@ -78,7 +78,7 @@ class SignIn extends React.Component {
 				        htmlFor="password">Password</label>
 				        <input
 				        onChange={this.onPasswordChange}
-				         className="b pa2 input-reset ba   w-100"
+				         className="b pa2  redn input-reset ba   w-100"
 				         type="password"
 				         name="password" 
 				          id="password"/>

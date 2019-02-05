@@ -23,7 +23,7 @@ class Register extends React.Component {
 		this.setState({name: event.target.value})
 	}
 	onSubmitSignin = () => {
-		fetch('http://localhost:3000/register', {
+		fetch('https://fathomless-shelf-13230.herokuapp.com/register', {
 			method: 'post',
 			headers: {'Content-Type': 'application/json'},
 			body: JSON.stringify({
@@ -35,13 +35,14 @@ class Register extends React.Component {
 		.then(response => response.json())
 
 		.then(user => {
-			console.log(user)
 			if (user.id) {
 			  this.props.loadUser(user)
               this.props.onRouteChange('home')
            
-			}
-		})
+			} else {
+			alert(user + ", email may be in use");
+		}} 
+		)
 	}
    render() {
 		return(
@@ -54,7 +55,7 @@ class Register extends React.Component {
 			        <label className="db redn fw6 subh lh-copy b f5" htmlFor="name">Name</label>
 			        <input 
 			        onChange={this.onNameChange}
-			        className="pa2 black redn bord input-reset subh ba bg-transparent hover-bg-black  w-100" 
+			        className="pa2 redn bord  input-reset subh ba bg-transparent hover-bg-black  w-100" 
 			        type="text" 
 			        name="name"  
 			        id="name"/>
@@ -63,16 +64,16 @@ class Register extends React.Component {
 			        <label className="db subh fw6 lh-copy f5" htmlFor="email-address">Email</label>
 			        <input 
 			        onChange={this.onEmailChange}
-			        className="pa2 subh input-reset bord ba bg-transparent hover-bg-black  w-100"
+			        className="pa2 subh input-reset redn bord ba bg-transparent hover-bg-black  w-100"
 			         type="email" 
 			         name="email-address" 
 			          id="email-address"/>
 			      </div>
 			      <div className="mv3">
-			        <label className="db fw6  subh lh-copy f5" htmlFor="password">Password</label>
+			        <label className="db fw6   subh lh-copy f5" htmlFor="password">Password</label>
 			        <input 
 			        onChange={this.onPasswordChange}
-			        className="b pa2  subh input-reset bord ba bg-transparent hover-bg-black  w-100" 
+			        className="b pa2  redn subh input-reset bord ba bg-transparent hover-bg-black  w-100" 
 			        type="password" 
 			        name="password"  
 			        id="password"/>

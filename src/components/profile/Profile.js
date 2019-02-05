@@ -33,7 +33,7 @@ class Profile extends React.Component {
  
   componentDidMount(){ 
    
-    fetch(`http://localhost:3000/profile/${this.state.id}`,{
+    fetch(`https://fathomless-shelf-13230.herokuapp.com/profile/${this.state.id}`,{
       method: 'get',
       headers: {'Content-Type': 'application/json',
           'Authorization': window.sessionStorage.getItem('token') 

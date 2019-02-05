@@ -14,7 +14,7 @@ const posts =({data, date, id }) => {
   <h1 className="f4  mw6 black b white mv0 pv2 ph3">{date.slice(0, -14)}</h1>
    <div className="pa3 bt">
 
-    <p className=" w5 white f6 f5-ns lh-copy measure mv0">
+    <p className=" w5 white f4  lh-copy measure mv0">
       {newdata}
      </p>
      

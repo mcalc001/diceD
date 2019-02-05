@@ -44,14 +44,14 @@ const ResultsBox = ({result, number, onRollChange, onProfileUpdate}) => {
   <div className=" mt0 resultBox shadow-4 ph4 tc w-75 mw5.5 mw6-ns center pa3 mb4">
   <h1 className=" f4  b mv0 pv2 ph3 newcolor ">The Dice Have Chosen </h1>
   <div className="  bt newcolor">
-    <p className=" tc pa3 f6 f5-ns lh-copy measure">  
+    <p className=" tc pa3 f3   lh-copy measure">  
        {finalResult}
     </p>
      
      <div className=" flex-column center ">
-     <button onClick={() => onRollChange("rollAgain")} className=" shadow-5  b ph3 pv2 br2 putton input-reset ba grow pointer f5 dib mr2 "> Roll again?</button>
+     <button onClick={() => onRollChange("rollAgain")} className=" shadow-5  b ph3 pv2 br2 putton input-reset ba grow pointer f5 dib mr2 "> Roll again</button>
 
-     <button onClick={() => onProfileUpdate(finalResult)} className=" shadow-5 b ph3 pv2 br2 putton input-reset ba grow pointer f5 dib mr2"> Save Roll?</button>
+     <button onClick={() => onProfileUpdate(finalResult)} className=" shadow-5 b ph3 pv2 br2 putton input-reset ba grow pointer f5 dib mr2"> Save Roll</button>
       </div>
   </div>
   </div>

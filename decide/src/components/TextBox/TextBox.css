@@ -1,0 +1,86 @@
+
+.textbox1{
+	background-image:url("https://i.ibb.co/xSFzcxB/1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+.textbox2{
+	background-image:url("https://i.ibb.co/pdzgGkP/2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.textbox3{
+	background-image:url("https://i.ibb.co/tM4zYFJ/3.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.textbox4{
+	background-image:url("https://i.ibb.co/Yf7GWSq/4.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.textbox5{
+	background-image:url("https://i.ibb.co/WnCRQYv/5.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.textbox6{
+	background-image:url("https://i.ibb.co/HxQV4yT/6.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+
+
+
+.error {
+ border: 3px solid black;
+ background: #701328;
+
+
+  }
+
+.bord{
+	border: 6px solid #701328;
+
+}
+
+textarea .pooo : focus {
+
+    background-color: yellow;
+
+}
+
+article {
+	
+	 border: 5px solid #701328;
+	 border-radius: 30px 30px 30px 30px;
+}
+
+.measure1{
+	max-width: 25em;
+}
+
+.putton {
+	background-color: #701328;
+	color: white;
+}
+
+.bg {
+	background-color: #701328;
+	color: white;
+}

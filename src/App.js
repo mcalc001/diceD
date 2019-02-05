@@ -39,7 +39,7 @@ class App extends Component {
   componentDidMount(){
     const token = window.sessionStorage.getItem('token')
     if (token) {
-      fetch('http://localhost:3000/signin', {
+      fetch('https://fathomless-shelf-13230.herokuapp.com/signin', {
         method : 'post',
         headers: {
           'Content-Type': 'application/json',
@@ -49,7 +49,7 @@ class App extends Component {
           .then(resp => resp.json())
           .then(data => {
             if( data && data.id){
-            fetch(`http://localhost:3000/signinPf/${data.id}`,{
+            fetch(`https://fathomless-shelf-13230.herokuapp.com/signinPf/${data.id}`,{
               method : 'get',
               headers: {
               'Content-Type': 'application/json',
@@ -73,7 +73,7 @@ class App extends Component {
  
 onProfileUpdate = (data) => {
 
-    fetch(`http://localhost:3000/profile/${this.state.user.id}`,{
+    fetch(`https://fathomless-shelf-13230.herokuapp.com/profile/${this.state.user.id}`,{
       method: 'post',
       headers: {'Content-Type': 'application/json',
           'Authorization': window.sessionStorage.getItem('token') 

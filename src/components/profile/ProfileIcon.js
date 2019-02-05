@@ -26,7 +26,7 @@ class ProfileIcon extends React.Component {
 
    render(){
    	return(
-   		<div className=' items-center flex pt4 pr4 tc'>
+   		<div className=' items-center flex pt4 pr4 tc pointer '>
        <h5 className='pr3'> {} </h5>
    		 <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
             <DropdownToggle

@@ -56,15 +56,6 @@ handleSubmit = (evt) => {
     this.matchNumbers(onRandomise(newArray))
 
 };
-// this may work  try when ready
-// handleSubmit = (evt) => {
-//   const newArray =[]
-//     Object.entries(this.state).map(value => { 
-//     return value[1].length > ""
-    
-//   });
-//    this.matchNumbers(onRandomise(this.handleSubmit()))
-// };
 
   passProps = (result, number) =>{
        var props = this.props;
@@ -98,7 +89,7 @@ handleSubmit = (evt) => {
 
         return(
 <div className="pl1 pr2">
-  <article className="  shadow-3 ph4 tc w-100 mw5.5 mw6-ns center pa3 mb4  ">
+  <article className="  shadow-3 ph4  tc w-100 mw5.5 mw6-ns center pa3 mb4  ">
      <div  >
       <label htmlFor="comment"
        className=" pv2 f6 pa1 b db mb2 "> 
@@ -107,7 +98,7 @@ handleSubmit = (evt) => {
      onChange={this.box1Change}
      id="box1"
      name="box1" 
-     className={(this.state.box1 ? "center tc bg db border-box w-100 measure ba bord pa3 br2 mb2" : "textbox1 center tc bg db border-box w-100 measure ba bord pa3 br2 mb2")}
+     className={(this.state.box1 ? "center f4 tc b bg db border-box w-100 measure ba bord pa3 br2 mb2" : "textbox1 f4 center tc bg db border-box w-100 measure ba bord pa3 br2 mb2")}
      aria-describedby="comment-desc">
      </textarea>
   </div>
@@ -120,7 +111,7 @@ handleSubmit = (evt) => {
      onChange={this.box2Change}
      id="box2"
      name="box2" 
-     className={(this.state.box2 ? "center tc bg db border-box w-100 measure ba bord pa3 br2 mb2" : "textbox2 center tc bg db border-box w-100 measure ba bord pa3 br2 mb2")}
+     className={(this.state.box2 ? "center tc f4 b bg db border-box w-100 measure ba bord pa3 br2 mb2" : "textbox2 center tc f4  bg db border-box w-100 measure ba bord pa3 br2 mb2")}
      aria-describedby="comment-desc">
      </textarea>
   </div>
@@ -134,7 +125,7 @@ handleSubmit = (evt) => {
      onChange={this.box3Change}
      id="box3"
      name="box3" 
-     className={(this.state.box3 ? "center tc bg db border-box w-100 measure ba bord pa3 br2 mb2" : "textbox3 center tc bg db border-box w-100 measure ba bord pa3 br2 mb2")}
+     className={(this.state.box3 ? "center f4 b tc bg db border-box w-100 measure ba bord pa3 br2 mb2" : "textbox3 center f4  tc bg db border-box w-100 measure ba bord pa3 br2 mb2")}
      aria-describedby="comment-desc">
      </textarea>
   </div>
@@ -143,12 +134,12 @@ handleSubmit = (evt) => {
      <div>
       <label htmlFor="comment"
        className="f6 pa1 b db mb2">
-     <span className="normal black-60"></span></label>
+     <span className="normal f5 black-60"></span></label>
     <textarea 
      onChange={this.box4Change}
      id="box4"
      name="box4" 
-     className={(this.state.box4 ? "center tc bg db border-box w-100 measure ba bord pa3 br2 mb2" : "textbox4 center tc bg db border-box w-100 measure ba bord pa3 br2 mb2")}
+     className={(this.state.box4 ? "center tc f4 b bg db border-box w-100 measure ba bord pa3 br2 mb2" : "textbox4 center tc bg db border-box f4  w-100 measure ba bord pa3 br2 mb2")}
      aria-describedby="comment-desc">
      </textarea>
   </div>
@@ -162,7 +153,7 @@ handleSubmit = (evt) => {
      onChange={this.box5Change}
      id="box5"
      name="box5"
-     className={(this.state.box5 ? "center tc bg db border-box w-100 measure ba bord pa3 br2 mb2" : "textbox5 center tc bg db border-box w-100 measure ba bord pa3 br2 mb2")} 
+     className={(this.state.box5 ? "center f4 b tc bg db border-box w-100 measure ba bord pa3 br2 mb2" : "textbox5 center f4  tc bg db border-box w-100 measure ba bord pa3 br2 mb2")} 
      aria-describedby="comment-desc">
      </textarea>
   </div>
@@ -176,7 +167,7 @@ handleSubmit = (evt) => {
      onChange={this.box6Change}
      id="box6"
      name="box6" 
-     className={(this.state.box6 ? "center tc bg db border-box w-100 measure ba bord pa3 br2 mb2" : "textbox6 center tc bg db border-box w-100 measure ba bord pa3 br2 mb2")}
+     className={(this.state.box6 ? "center f4 b tc bg db border-box w-100 measure ba bord pa3 br2 mb2" : "textbox6 center f4 tc bg db border-box w-100 measure ba bord pa3 br2 mb2")}
      aria-describedby="comment-desc">
      </textarea>
   </div>
